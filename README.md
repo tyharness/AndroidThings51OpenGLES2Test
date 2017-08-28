@@ -3,7 +3,7 @@ Example opengles2 Android app for phone and Android Things Device Developer Prev
 
 Please note this app comes in 3 flavours: phone, Android Things 41 and Android Things 51.
 
-demo.png
+![screen shot] demo.png
 
 At this stage the app is not running on 51.  Android 41 is not hardware accelerated and therefore unlikey to work but made
 for completeness.  The phone flavour indicates the code is valid in a general sense.
@@ -22,8 +22,11 @@ To connect to Android Things:
 adb connect 192.168.0.10
 
 adb devices -l
+
 List of devices attached
+
 192.168.0.10:5555      device product:   iot_rpi3 model:iot_rpi3 device:rpi3
+
 cfa60340               device usb:1-1
 
 
