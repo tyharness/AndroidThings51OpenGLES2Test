@@ -3,7 +3,7 @@ Example opengles2 Android app for phone and Android Things Device Developer Prev
 
 Please note this app comes in 3 flavours: phone, Android Things 41 and Android Things 51.
 
-[[https://github.com/tyharness/AndroidThings51OpenGLES2Test/blob/master/demo.png|screen shot]]
+[[https://github.com/tyharness/AndroidThings51OpenGLES2Test/blob/master/demo.png|alt = screenshot missing]]
 
 
 
