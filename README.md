@@ -4,7 +4,7 @@ Example opengles2 Android app for phone and Android Things Device Developer Prev
 Please note this app comes in 3 flavours: phone, Android Things 41 and Android Things 51.
 
 
-![[demo.png]tyharness.github.com.AndroidThings51OpenGLES2Test/demo.png]
+![demo.png](https://github.com/tyharness/AndroidThings51OpenGLES2Test)
 
 
 The code is now running on Android Things DP51 but there's some ghosting issues using my hdmi screen.
