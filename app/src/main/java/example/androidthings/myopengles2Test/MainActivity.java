@@ -9,6 +9,8 @@ import android.opengl.GLSurfaceView;
 import android.util.Log;
 import android.os.Build;
 
+import javax.microedition.khronos.egl.EGLConfig;
+
 
 
 public class MainActivity extends Activity {
@@ -24,9 +26,9 @@ public class MainActivity extends Activity {
     super.onCreate(savedInstanceState);
     Log.d(TAG, "onCreate");
         
-        
+            
     mGLSurfaceView = new GLSurfaceView(this);
- 
+       
     
     
     final boolean isHardwareAccelerationSupported = mGLSurfaceView.isHardwareAccelerated();
@@ -46,15 +48,32 @@ public class MainActivity extends Activity {
     final ConfigurationInfo Info = activityManager.getDeviceConfigurationInfo();
    
     //Bypass but app may crash
-    //final boolean isGLES20supported = Info.reqGlEsVersion >= 0x20000  ||  Build.MODEL.contains("iot_rpi3");
+    final boolean isGLES20supported = Info.reqGlEsVersion >= 0x20000  ||  Build.MODEL.contains("iot_rpi3");
     
-    final boolean isGLES20supported = Info.reqGlEsVersion >= 0x20000 ;
+   //final boolean isGLES20supported = Info.reqGlEsVersion >= 0x20000 ;
     
   
     
     
     if (isGLES20supported)
     {       
+      
+         mGLSurfaceView.setEGLConfigChooser(8, 8, 8, 8, 16, 0); //what does this work?????
+         //mGLSurfaceView.setEGLConfigChooser(true); //why does this fail
+         
+         /*If no setEGLConfigChooser method is called, then by default the view will 
+          * choose an RGB_888 surface with a depth buffer depth of at least 16 bits.
+          * 
+          * 
+          * void setEGLConfigChooser (int redSize, 
+                int greenSize, 
+                int blueSize, 
+                int alphaSize, 
+                int depthSize, 
+                int stencilSize)
+          */
+      
+         
         mGLSurfaceView.setEGLContextClientVersion(2);
         mGLSurfaceView.setRenderer(new MyGLrenderer());
     }
