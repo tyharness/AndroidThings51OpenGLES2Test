@@ -3,10 +3,18 @@ Example opengles2 Android app for phone and Android Things Device Developer Prev
 
 Please note this app comes in 3 flavours: phone, Android Things 41 and Android Things 51.
 
-At this stage the app is not running on 51.  Android 41 is not hardware accelerated and therefore unlikey to work but made
-for completeness.  The phone flavour indicates the code is valid in a general sense.
 
-Just playing about trying to learn opengles2 and Android Things on the Raspberry Pi.  Any help or input
+![demo.png](tyharness.github.com.AndroidThings51OpenGLES2Test/demo.png)
+
+
+The code is now running on Android Things DP51 but there's some ghosting issues using my hdmi screen.
+Perhaps you wont experience this.
+
+
+Android 41 is not hardware accelerated and therefore unlikey to work but made
+for completeness.  The phone flavour does work and indicates the code is valid in a general sense.
+
+Just playing about trying to learn opengles2 using Android Things on the Raspberry Pi.  Any help or input
 is much appreciated.  It's a very simple app to display Maxwell's colour triangle.
  
 
@@ -20,11 +28,8 @@ To connect to Android Things:
 adb connect 192.168.0.10
 
 adb devices -l
-
 List of devices attached
-
 192.168.0.10:5555      device product:   iot_rpi3 model:iot_rpi3 device:rpi3
-
 cfa60340               device usb:1-1
 
 
@@ -76,7 +81,7 @@ See what OEM apps have been installed:
 
 adb -s 192.168.0.10 shell pm list packages -3
 
-How to unistall:
+How to uninstall the app:
 adb -s 192.168.0.10 uninstall example.androidthings.myopengles2Test
 
 
