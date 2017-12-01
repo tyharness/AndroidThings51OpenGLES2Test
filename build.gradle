@@ -1,20 +1,78 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.0'
+
+    defaultConfig {
+        applicationId "example.myopengles2Test"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+       
+    }
+
+    productFlavors {
+        things41 {
+           applicationId "example.androidthings.myopengles2Test"
+           minSdkVersion 24
+           targetSdkVersion 26
+           manifestPlaceholders = [ Key:"THINGS41" ]
+        }
+
+ 	things51 {
+           applicationId "example.androidthings.myopengles2Test"
+           minSdkVersion 26
+           targetSdkVersion 26
+           manifestPlaceholders = [ Key:"THINGS51" ]
+        }
+
+	things60 {
+           applicationId "example.androidthings.myopengles2Test"
+           minSdkVersion 27
+           targetSdkVersion 27
+           manifestPlaceholders = [ Key:"THINGS60" ]
+        }
 
 
-buildscript {
-    repositories {
-        jcenter()
+        phone {
+            applicationId "example.phone.myopengles2Test"
+            minSdkVersion 14
+            targetSdkVersion 26
+            manifestPlaceholders = [ Key:"PHONE" ]
+        }
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
-    }
+
+
+if (productFlavors.equals("things60")) {
+
+dependencies {   
+             provided 'com.google.android.things:androidthings:0.6.0-devpreview'
+             } 
 }
 
-allprojects {
-    repositories {
-        jcenter()
-    }
+
+if (productFlavors.equals("things51")) {
+
+dependencies {   
+             provided 'com.google.android.things:androidthings:0.5.1-devpreview'
+             } 
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+if (productFlavors.equals("things41")) {
+
+dependencies {   
+             provided 'com.google.android.things:androidthings:0.4.1-devpreview'
+             } 
 }
+
+
+
+}
+
+
+
+
