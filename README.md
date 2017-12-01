@@ -1,19 +1,20 @@
-Example OpenGLES2 v1.1 Android app for an Android phone and Android Things Rpi3 Device using Developer Preview 4.1, 5.1, 6.0
+Example OpenGLES2 Android app for an Android phone and Android Things Rpi3 Device using Developer Preview 4.1, 5.1, 6.0
 --------------------------------------------------------------------------------------
 
 Just playing about trying to learn opengles2 using Android Things on the Raspberry Pi.  Any help or input
-is much appreciated.  It's a very simple app to display Maxwell's colour triangle.
+is much appreciated.  It's a very simple app to display (a simplified) Maxwell's colour triangle.
 
 Please note this app comes in 4 flavours: phone, Android Things 41, Android Things 51 and Android Things 60
 
 v1.1: The code is now running on Android Things DP60. I'd recommend you upgrade to Dev Preview 6.0.
 
-There are some ghosting issues using DP51 my particular hdmi screen.
+as there are some ghosting issues using DP51 and some hdmi screens.
 
 ![at51.png](at51.png)
 
-Android 41 is not hardware accelerated and therefore unlikey to work but made
-for completeness.  The phone flavour does work and indicates the code is valid in a general sense.
+Android 41 is not hardware accelerated and therefore unlikey to work but I made it
+for completeness.  The phone flavour does work and indicates the code is valid in a general sense and just 
+ highlights the ghosting issue in DP51.  
 
 
 Ty Harness December 2017
