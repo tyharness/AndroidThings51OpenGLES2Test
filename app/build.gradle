@@ -30,6 +30,14 @@ android {
            manifestPlaceholders = [ Key:"THINGS51" ]
         }
 
+	things60 {
+           applicationId "example.androidthings.myopengles2Test"
+           minSdkVersion 27
+           targetSdkVersion 27
+           manifestPlaceholders = [ Key:"THINGS60" ]
+        }
+
+
         phone {
             applicationId "example.phone.myopengles2Test"
             minSdkVersion 14
@@ -37,6 +45,14 @@ android {
             manifestPlaceholders = [ Key:"PHONE" ]
         }
     }
+
+
+if (productFlavors.equals("things60")) {
+
+dependencies {   
+             provided 'com.google.android.things:androidthings:0.6.0-devpreview'
+             } 
+}
 
 
 if (productFlavors.equals("things51")) {
